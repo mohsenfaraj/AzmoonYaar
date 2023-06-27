@@ -1,0 +1,43 @@
+{
+  "time": 1,
+  "questions": [
+    {
+      "title": "تگ مورد استفاده برای قرار دادن کدهای جاوا اسکریپت در اچ تی ام ال چیست",
+      "answers": ["<javascript>", "<js>", "<scripting>", "<script>"],
+      "true": 4
+    },
+    {
+      "title": "مکان درست برای قرار دادن کدهای جاوا اسکریپت در اچ  تی ام ال چیست؟",
+      "answers": ["در تگ head", "در تگ body", "هر دو گزینه صحیح هستند"],
+      "true": 3
+    },
+    {
+      "title": "سینتکس صحیح لود کردن فایل جاوا اسکریپت خارجی چیست",
+      "answers": [
+        "<script src=\"xxx.js\">",
+        "<script href=\"xxx.js\">",
+        "<script name=\"xxx.js\">"
+      ],
+      "true": 1
+    },
+    {
+      "title": "با کدام دستور می‌توان Hello World را در پنجره نشان داد؟",
+      "answers": [
+        "alertBox(\"Hello World\")",
+        "msgBox(\"Hello World\");",
+        "alert(\"Hello World\");",
+        "msg(\"Hello World\");"
+      ],
+      "true": 3
+    },
+    {
+      "title": "نحوه صحیح تعریف تابع در جاوا اسکریپت چیست؟",
+      "answers": [
+        "function:myFunction()",
+        "function myFunction()",
+        "function = myFunction()"
+      ],
+      "true": 2
+    }
+  ]
+}

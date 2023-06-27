@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="fa" class="h-100">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>آزمون یار</title>
+    <link rel="stylesheet" href="./styles/bootstrap.min.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
+  </head>
+  <body
+    class="d-flex h-100 text-center text-bg-dark justify-content-center"
+    dir="rtl"
+  >
+    <div
+      class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column"
+      id="starter"
+    >
+      <header class="mb-auto">
+        <div>
+          <h3 class="float-md-end mb-0">آزمون یار</h3>
+        </div>
+      </header>
+
+      <main class="px-3">
+        <h1>ابزار آزمون یار</h1>
+        <p class="lead">
+          به کمک ابزار آزمون یار می‌توانید با آزمون‌های پیش تعریف شده‌ای که در
+          اینترنت آپلود شده است توانایی و مهارت خود را در درک درس محک بزنید.
+        </p>
+        <p class="lead">این ابزار به کمک بوت استرپ و جی کوئری ساخته شده است.</p>
+        <p class="lead">
+          برای شروع آزمون، لینک آزمون مورد نظر را در فرم زیر وارد کنید:
+        </p>
+        <div class="mb-3">
+          <input
+            type="url"
+            class="form-control"
+            id="link"
+            dir="ltr"
+            value="./questions.json"
+            placeholder="لینک آزمون"
+          />
+        </div>
+        <button type="btn" class="btn btn-primary" id="start">
+          شروع آزمون
+        </button>
+      </main>
+
+      <footer class="mt-auto text-white-50">
+        <p>کدنویسی توسط محسن فرج‌اللهی دانشجوی وب</p>
+      </footer>
+    </div>
+    <div class="card m-5 w-50" id="question">
+      <h5 class="card-header" id="question-title">سوال</h5>
+      <div class="card-body d-flex flex-column h-100">
+        <h5 class="card-title mb-4" id="q-title"></h5>
+        <div id="answers"></div>
+        <div class="mt-auto mb-3">
+          <div class="mt-4">
+            <button href="#" class="btn btn-primary" id="prevquestion">
+              سوال قبل
+            </button>
+            <button href="#" class="btn btn-primary" id="nextquestion">
+              سوال بعدی
+            </button>
+          </div>
+          <div class="mt-2">
+            <button href="#" class="btn btn-success" id="showresult">
+              اتمام آزمون
+            </button>
+            <button href="#" class="btn btn-warning" id="newExam">
+              آزمون جدید
+            </button>
+          </div>
+          <div class="mt-3">
+            <p class="text-muted" id="q-time">زمان باقی مانده:</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="modal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title text-dark" id="exampleModalLabel">نتایج</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <table class="table">
+              <tr class="bg-success text-white">
+                <td>تعداد پاسخ درست</td>
+                <td id="truecount">10</td>
+              </tr>
+              <tr class="bg-danger text-white">
+                <td>تعداد پاسخ غلط</td>
+                <td id="falsecount">5</td>
+              </tr>
+              <tr class="bg-dark text-white">
+                <td>نمره از صد</td>
+                <td id="percentage">50</td>
+              </tr>
+              <tr>
+                <td>وضعیت</td>
+                <td class="text-white" id="passed">قبول</td>
+              </tr>
+            </table>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+              id="closemodal"
+            >
+              بستن صفحه
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./scripts/jquery-3.7.0.min.js"></script>
+    <script src="./scripts/bootstrap.bundle.min.js"></script>
+    <script src="./scripts/script.js"></script>
+  </body>
+</html>
